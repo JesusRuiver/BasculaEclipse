@@ -4,20 +4,22 @@ import java.util.ArrayList;
 
 public class Fruta {
 
-	Melocoton melocoton = new Melocoton();
-	private ArrayList<Manzana> manzanas;
-	private ArrayList<Pera> peras;
+	private ArrayList<Manzana> manzanas = new ArrayList<>();;
+	private ArrayList<Pera> peras  = new ArrayList<>();
 	private ArrayList<Melocoton> melocotones = new ArrayList<>();
+	private ArrayList<Limon> limones = new ArrayList<>();
 
 	public Fruta() {
-		super();
+		
 	}
 
-	public Fruta(ArrayList<Manzana> manzanas, ArrayList<Pera> peras, ArrayList<Melocoton> melocotones) {
-		super();
+	public Fruta(ArrayList<Manzana> manzanas, ArrayList<Pera> peras, ArrayList<Melocoton> melocotones,
+			ArrayList<Limon> limones) {
+		
 		this.manzanas = manzanas;
 		this.peras = peras;
 		this.melocotones = melocotones;
+		this.limones = limones;
 	}
 
 	public ArrayList<Manzana> getManzanas() {
@@ -52,6 +54,26 @@ public class Fruta {
 	}
 
 	public void listaMelocotones() {
+		
+		for(Melocoton melocoto : melocotones){
+			
+			System.out.println(melocotones.size() + " " + melocoto.getNombre());
+		}
+
+	}
+	
+	public void addLimon(Limon limon) {
+
+		limones.add(limon);
+	}
+	
+	public void listaLimones() {
+		
+		for(Limon limon : limones){
+			
+			System.out.println(limones.size() + " " + limon.getNombre());
+		}
+			
 
 	}
 
