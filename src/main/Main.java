@@ -59,29 +59,7 @@ public class Main {
 				break;
 
 			}
-			// if (opcion.equals("1")) {
-			//
-			// System.out.println("¿Que fruta desea introducir?");
-			// System.out.println("1.- Limón");
-			// System.out.println("2.- Manzana");
-			// System.out.println("3.- Melocotón");
-			// System.out.println("4.- Pera");
-			//
-			// opcion = entrada.nextLine();
-			//
-			// if (opcion.equals("1")) {
-			// System.out.println("Usted a elegido Limón");
-			// System.out.println("Introduzca el peso:");
-			// peso = entrada.nextInt();
-			// System.out.println("Introduzca el precio:");
-			// precio = entrada.nextDouble();
-			//
-			// fruta.addLimon(new Limon(peso, precio));
-			//
-			// System.out.println("Usted introducido un Limon");
-			//
-			// fruta.listaLimones();
-			// }
+			
 
 		}
 
