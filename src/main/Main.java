@@ -10,7 +10,8 @@ public class Main {
 
 	private static Fruta fruta = new Fruta();
 
-	private static int opcion;
+	private static int menuPrincipal;
+	private static int subMenu;
 	private static int peso;
 	private static double precio;
 
@@ -18,51 +19,60 @@ public class Main {
 
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Bascula de alimentos");
-		System.out.println("Introdzuca la opción que desea\n");
+		while (menuPrincipal != 4) {
 
-		System.out.println("1.-Frutas");
-		System.out.println("2.-Verduras");
-		System.out.println("3.-Ticket");
-		System.out.println("4.-Salir");
+			System.out.println("Bascula de alimentos");
+			System.out.println("Introdzuca la opción que desea	\n");
 
-		opcion = entrada.nextInt();
+			System.out.println("1.-Frutas");
+			System.out.println("2.-Verduras");
+			System.out.println("3.-Ticket");
+			System.out.println("4.-Salir");
 
-		switch (opcion) {
+			menuPrincipal = entrada.nextInt();
 
-		case 1:
+			switch (menuPrincipal) {
 
-			System.out.println("¿Que fruta desea introducir?");
-			System.out.println("1.- Limón");
-			System.out.println("2.- Manzana");
-			System.out.println("3.- Melocotón");
-			System.out.println("4.- Pera");
+			case 1:
 
-			opcion = entrada.nextInt();
+				System.out.println("¿Que fruta desea introducir?	\n");
 
-			if (opcion == 1) {
+				System.out.println("1.- Limón");
+				System.out.println("2.- Manzana");
+				System.out.println("3.- Melocotón");
+				System.out.println("4.- Pera");
+				System.out.println("5.- Volver al Menu Principal");
 
-				System.out.println("Usted a elegido Limón");
-				System.out.println("Introduzca el peso:");
+				subMenu = entrada.nextInt();
 
-				peso = entrada.nextInt();
+				switch (subMenu) {
 
-				System.out.println("Introduzca el precio:");
-				precio = entrada.nextDouble();
+				case 1:
 
-				fruta.addLimon(new Limon(peso, precio));
+					System.out.println("Usted a elegido Limón");
+					System.out.println("Introduzca el peso:");
 
-				System.out.println("Usted introducido un Limon");
+					peso = entrada.nextInt();
 
-				fruta.listaLimones();
+					System.out.println("Introduzca el precio:");
+					precio = entrada.nextDouble();
 
-				break;
+					fruta.addLimon(new Limon(peso, precio));
+
+					System.out.println("Usted introducido un Limon");
+
+					fruta.listaLimones();
+
+					break;
+
+				case 5:
+
+					break;
+
+				}
 
 			}
-			
-
 		}
-
 	}
 
 }
